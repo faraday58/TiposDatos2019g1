@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{40BE3436-7D38-422D-BE9A-1D0065C3FE34}</ProjectGuid>
+    <ProjectGuid>{71D8A509-C75E-4D0C-9FF1-565A921E5CE7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TiposDatos2019g1</RootNamespace>
-    <AssemblyName>TiposDatos2019g1</AssemblyName>
+    <RootNamespace>Automovil</RootNamespace>
+    <AssemblyName>Automovil</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
