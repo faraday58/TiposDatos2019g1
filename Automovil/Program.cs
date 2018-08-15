@@ -2,35 +2,20 @@
 
 namespace Automoviles
 {
-    class Automovil
-    {
-        public string marca;
-        public ushort modelo;
-        public string color;
-        public ushort potencia;
-        public bool alarma;
-
-        public void Encender()
-        {
-            Console.WriteLine("Automovil Encendido");
-        }
-        public void Apagar()
-        {
-            Console.WriteLine("Automovil Apagado");
-        }
-        
-
-
-    }
-
 
 
     class Program
     {
+
+
+
         static void Main()
         {
             //Instancia de la clase Automovil
+            
             Automovil miAutomovil = new Automovil();
+
+            /*
             miAutomovil.marca = "BMW";
             miAutomovil.modelo = 2019;
             miAutomovil.color = "Blanco";
@@ -44,6 +29,8 @@ namespace Automoviles
                 miAutomovil.Encender();
             }
             miAutomovil.Apagar();
+            */
+
 
 
         }
