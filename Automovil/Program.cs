@@ -15,6 +15,19 @@ namespace Automoviles
             
             Automovil miAutomovil = new Automovil();
 
+            Console.WriteLine("Ingresa la marca de tu Automóvil ");
+            string marca = Console.ReadLine();
+             Automovil suautomovil = new Automovil(marca);
+            miAutomovil = suautomovil;
+
+            Console.WriteLine("Ingresa el modelo y la potencia");
+            ushort modelo = ushort.Parse(Console.ReadLine());
+            ushort potencia = ushort.Parse(Console.ReadLine());
+
+            Automovil nuestroAutomovil = new Automovil(modelo, potencia);
+            
+
+
             /*
             miAutomovil.marca = "BMW";
             miAutomovil.modelo = 2019;
