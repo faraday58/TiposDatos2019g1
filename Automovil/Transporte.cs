@@ -2,7 +2,7 @@
 
 namespace MediosTransporte
 {
-    class Automovil
+    class Transporte
     {
         #region Atributos
         private byte velocidad;
@@ -12,7 +12,6 @@ namespace MediosTransporte
         private ushort potencia;
         private bool alarma;
         #endregion
-
         #region Propiedades
         public ushort Modelo
         {
@@ -27,7 +26,7 @@ namespace MediosTransporte
             //Escribe o asigna un nuevo valor al atributo modelo
             set
             {
-                if ( value < 1890 || value > 2019 )
+                if (value < 1890 || value > 2019)
                 {
                     modelo = 2019;
                 }
@@ -35,7 +34,7 @@ namespace MediosTransporte
                 {
                     modelo = value;
                 }
-                
+
             }
         }
 
@@ -59,11 +58,12 @@ namespace MediosTransporte
             }
         }
 
-        public byte Velocidad {
+        public byte Velocidad
+        {
             get => velocidad;
             set
             {
-                if( velocidad > 253)
+                if (velocidad > 253)
                 {
                     velocidad = 254;
                 }
@@ -71,58 +71,20 @@ namespace MediosTransporte
                 {
                     velocidad = value;
                 }
-                
-            } 
-                
+
+            }
+
 
         }
-
         #endregion
 
-
-        #region Constructores
-        public Automovil()
-        {
-            marca = "Rolls Royce";
-            modelo = 2019;
-            Potencia = 500;
-
-            Console.WriteLine("Mi automovil es marca: {0} \n modelo: {1} \n potencia: {2}", marca, modelo, Potencia);
-            Encender();
-        }
-
-        public Automovil(string marca)
-        {
-            //Asignando valor al atributo 
-            this.marca = marca;
-            Console.WriteLine("La marca que ingresaste es {0}", this.marca);
-            Apagar();
-
-        }
-
-        public Automovil(ushort modelo, ushort potencia)
-        {
-            int distancia=0; 
-            this.modelo = modelo;
-            this.Potencia = potencia;
-
-           
-            Console.WriteLine("Ingrese distancia recorrida");
-            distancia = int.Parse(Console.ReadLine());      
-            int velocity = potencia * distancia;
-
-            Console.WriteLine("Mi automovil modelo {0} recorrió {1} km con potencia de {2} HP y a una velocidad de {3}", modelo, distancia, potencia, velocity);            
-
-        }
-
-        #endregion
 
         #region Métodos
 
         public void Encender()
         {
 
-            Console.WriteLine("Automovil Encendido");
+            Console.WriteLine("Medio Encendido");
         }
 
 
@@ -134,10 +96,8 @@ namespace MediosTransporte
 
         public void Apagar()
         {
-            Console.WriteLine("Automovil Apagado");
+            Console.WriteLine("Medio Apagado");
         }
         #endregion
-
-
     }
 }

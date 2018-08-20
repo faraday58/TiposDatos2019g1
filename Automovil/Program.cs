@@ -1,14 +1,11 @@
 ﻿using System;
 
-namespace Automoviles
+namespace MediosTransporte
 {
 
 
     class Program
     {
-
-
-
         static void Main()
         {
             //Instancia de la clase Automovil
@@ -21,6 +18,9 @@ namespace Automoviles
             {
                 miAutomovil.Acelerar();
             }
+
+            Camion uncamion = new Camion();        
+
 
 
             Console.WriteLine("Ingresa la marca de tu Automóvil ");
