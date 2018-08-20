@@ -5,6 +5,7 @@ namespace Automoviles
     class Automovil
     {
         #region Atributos
+        private byte velocidad;
         private string marca;
         private ushort modelo;
         private string color;
@@ -13,6 +14,69 @@ namespace Automoviles
         #endregion
 
         #region Propiedades
+        public ushort Modelo
+        {
+            //get Lee el valor del atributo modelo
+            get
+            {
+                if (modelo == 0)
+                    return 2005;
+                else
+                    return modelo;
+            }
+            //Escribe o asigna un nuevo valor al atributo modelo
+            set
+            {
+                if ( value < 1890 || value > 2019 )
+                {
+                    modelo = 2019;
+                }
+                else
+                {
+                    modelo = value;
+                }
+                
+            }
+        }
+
+        public ushort Potencia
+        {
+            get
+            {
+                return potencia;
+            }
+            set
+            {
+                if (value < 200 || value > 2000)
+                {
+                    potencia = 1000;
+                }
+                else
+                {
+                    potencia = value;
+                }
+
+            }
+        }
+
+        public byte Velocidad {
+            get => velocidad;
+            set
+            {
+                if( velocidad > 253)
+                {
+                    velocidad = 254;
+                }
+                else
+                {
+                    velocidad = value;
+                }
+                
+            } 
+                
+
+        }
+
         #endregion
 
 
@@ -21,10 +85,10 @@ namespace Automoviles
         {
             marca = "Rolls Royce";
             modelo = 2019;
-            potencia = 500;
+            Potencia = 500;
 
-            Console.WriteLine("Mi automovil es marca: {0} \n modelo: {1} \n potencia: {2}", marca, modelo, potencia);
-            Apagar();
+            Console.WriteLine("Mi automovil es marca: {0} \n modelo: {1} \n potencia: {2}", marca, modelo, Potencia);
+            Encender();
         }
 
         public Automovil(string marca)
@@ -32,7 +96,7 @@ namespace Automoviles
             //Asignando valor al atributo 
             this.marca = marca;
             Console.WriteLine("La marca que ingresaste es {0}", this.marca);
-            Encender();
+            Apagar();
 
         }
 
@@ -40,7 +104,7 @@ namespace Automoviles
         {
             int distancia=0; 
             this.modelo = modelo;
-            this.potencia = potencia;
+            this.Potencia = potencia;
 
            
             Console.WriteLine("Ingrese distancia recorrida");
@@ -60,6 +124,14 @@ namespace Automoviles
 
             Console.WriteLine("Automovil Encendido");
         }
+
+
+        public void Acelerar()
+        {
+            Velocidad++; //velocidad = velocidad + 1
+            Console.WriteLine(Velocidad);
+        }
+
         public void Apagar()
         {
             Console.WriteLine("Automovil Apagado");
