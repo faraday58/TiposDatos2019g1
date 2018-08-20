@@ -12,6 +12,9 @@ namespace Automoviles
         private bool alarma;
         #endregion
 
+        #region Propiedades
+        #endregion
+
 
         #region Constructores
         public Automovil()
