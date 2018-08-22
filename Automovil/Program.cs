@@ -9,19 +9,27 @@ namespace MediosTransporte
         static void Main()
         {
             //Instancia de la clase Automovil
-            
+
             Automovil miAutomovil = new Automovil();
 
             miAutomovil.Velocidad = 250;
 
-            for( int i=0; i< 7; i++)
+            for (int i = 0; i < 7; i++)
             {
                 miAutomovil.Acelerar();
             }
 
-            Camion uncamion = new Camion();        
-
-
+            Camion uncamion = new Camion();
+            Bicicleta mibicicleta = new Bicicleta();
+            Motocicleta batimoto = new Motocicleta();
+            batimoto.Encender();
+            mibicicleta.Velocidad = 35;
+            Console.WriteLine("Acelerando Bicicleta");
+            for(int i =0; i < 7; i++)
+            {
+                                mibicicleta.Acelerar();
+            }
+            
 
             Console.WriteLine("Ingresa la marca de tu Automóvil ");
             string marca = Console.ReadLine();

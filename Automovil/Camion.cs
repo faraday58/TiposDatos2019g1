@@ -4,6 +4,9 @@ namespace MediosTransporte
 {
     class Camion:Transporte
     {
+        private int numerosillas;
+
+
         public Camion()
         {
             Modelo = 1700;

@@ -2,7 +2,7 @@
 
 namespace MediosTransporte
 {
-    class Transporte
+   abstract class Transporte
     {
         #region Atributos
         private byte velocidad;
@@ -37,7 +37,9 @@ namespace MediosTransporte
 
             }
         }
-
+        /// <summary>
+        /// Propiedad que asigna y lee la potencia del medio
+        /// </summary>
         public ushort Potencia
         {
             get
@@ -81,19 +83,26 @@ namespace MediosTransporte
 
         #region Métodos
 
-        public void Encender()
+        /// <summary>
+        /// Enciende al medio que se ocupa
+        /// </summary>
+
+        public virtual void Encender()
         {
 
             Console.WriteLine("Medio Encendido");
         }
-
-
-        public void Acelerar()
+        /// <summary>
+        /// Acelera al medio que necesita incrementar la velocidad
+        /// </summary>
+        public virtual void Acelerar()
         {
             Velocidad++; //velocidad = velocidad + 1
             Console.WriteLine(Velocidad);
         }
-
+        /// <summary>
+        /// Apaga al medio 
+        /// </summary>
         public void Apagar()
         {
             Console.WriteLine("Medio Apagado");
